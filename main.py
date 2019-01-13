@@ -94,6 +94,8 @@ img = torch.from_numpy(img)
 img = img.type('torch.FloatTensor')
 output = model(img)
 print(output.shape)
+output_max = torch.argmax(output,dim=1)
+print(output_max.shape)
 print(type(output))
 '''
 
